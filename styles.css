@@ -88,12 +88,13 @@ ol {
   min-height: 60vh;
   padding: 32px clamp(20px, 5vw, 72px);
   background: linear-gradient(
-      140deg,
-      rgba(11, 13, 21, 0.95),
-      rgba(11, 13, 21, 0.6)
+      150deg,
+      rgba(11, 15, 28, 0.9),
+      rgba(11, 13, 21, 0.7)
     ),
-    url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80")
-      center/cover;
+    radial-gradient(circle at 85% 15%, rgba(91, 212, 255, 0.25), transparent 50%),
+    url("./assets/alessandro-home.jpg") center/cover no-repeat;
+  background-color: #0b0d15;
   position: relative;
   overflow: hidden;
 }
@@ -185,9 +186,38 @@ ol {
 
 .hero {
   margin-top: clamp(60px, 10vw, 160px);
-  max-width: 640px;
   position: relative;
   z-index: 2;
+}
+
+.hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(28px, 6vw, 48px);
+  align-items: start;
+}
+
+.hero__content {
+  max-width: 640px;
+}
+
+.hero__statement {
+  margin-bottom: clamp(18px, 3vw, 32px);
+  padding-left: clamp(12px, 2vw, 20px);
+  border-left: 3px solid rgba(249, 178, 51, 0.8);
+}
+
+.hero__statement p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4vw, 3.1rem);
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.hero__statement p + p {
+  margin-top: 0.25em;
 }
 
 .eyebrow {
@@ -197,17 +227,6 @@ ol {
   font-weight: 600;
   color: rgba(249, 178, 51, 0.85);
   margin-bottom: 1rem;
-}
-
-.hero h1 {
-  font-size: clamp(2.4rem, 5vw, 3.9rem);
-  margin-bottom: 1rem;
-}
-
-.lede {
-  font-size: 1.1rem;
-  color: rgba(238, 242, 249, 0.78);
-  margin-bottom: 2rem;
 }
 
 .hero__cta {
@@ -327,6 +346,27 @@ ol {
   margin-top: 0;
 }
 
+.about__video {
+  max-width: var(--max-width);
+  margin: 48px auto 0;
+}
+
+.about__video-inner {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
+.about__video-inner iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .link-list {
   list-style: none;
   margin: 0 0 24px;
@@ -355,13 +395,6 @@ ol {
 .text-link:hover,
 .text-link:focus-visible {
   color: #ffffff;
-}
-
-.about__body {
-  max-width: var(--max-width);
-  margin: 48px auto 0;
-  font-size: 1.02rem;
-  color: rgba(238, 242, 249, 0.8);
 }
 
 .grid {
