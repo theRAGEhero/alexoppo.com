@@ -1,0 +1,17 @@
+{
+  "name": "alexoppo.it",
+  "version": "1.0.0",
+  "description": "Personal blog and portfolio for Alessandro Oppo",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.21"
+  }
+}
